@@ -1,0 +1,32 @@
+[user]
+	name = Felipe Espinoza
+	email = fespinozacast@gmail.com
+[color]
+  ui  = auto
+[alias]
+	aa    = add --all
+	st    = status -sb
+  	std   = status
+	ci    = commit
+	br    = branch
+	brd   = branch -d
+  	wdiff = diff HEAD^ --word-diff
+  	undo  = reset --soft HEAD^
+	co    = checkout
+  	cob   = checkout -b
+	sma   = submodule add
+	smu   = submodule update
+  	mg    = merge --no-ff
+  	r     = !git l -30
+  	ra    = !git r --all
+  	l     = "!source ~/.githelpers && pretty_git_log"
+  	la    = !git l --all
+  	week  = !source ~/.githelpers && last_week_log
+[merge]
+	tool = opendiff
+[credential]
+	helper = osxkeychain
+[diff]
+	tool = opendiff
+[core]
+	excludesfile = /Users/fespinoza/.gitignore_global

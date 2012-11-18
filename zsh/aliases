@@ -1,0 +1,15 @@
+# cd
+alias ..='cd ..'
+
+# ls
+alias ls="ls -G" # for mac
+# alias ls="ls --color=auto" # for linux
+alias l="ls -lAh"
+alias ll="ls -l"
+alias la='ls -A'
+
+# commands starting with % for pasting from web
+alias %=' '
+alias mvim='~/Applications/./mvim'
+alias ctags='/usr/local/bin/ctags'
+alias git='hub'

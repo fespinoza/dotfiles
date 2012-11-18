@@ -1,0 +1,36 @@
+# example: https://gist.github.com/1478685
+
+TM_GIT = "/usr/local/bin/git"
+TM_RUBY = "$HOME/.rbenv/shims/ruby"
+PATH = "$HOME/.rbenv/bin:$PATH"
+RBENV_VERSION = "1.9.3-p194"
+include = "{$include,.gitignore}"
+
+fontName = "Monaco"
+fontSize = 12
+tabSize  = 2
+
+[ *.{icns,ico,jpg,jpeg,m4v,nib,pdf,png,psd,pyc,rtf,tif,tiff,xib} ]
+binary = true
+
+[ source.ruby ]
+softTabs = true
+tabSize  = 2
+
+[ source.haml ]
+softTabs = true
+tabSize  = 2
+
+[ source.coffee ]
+softTabs = true
+tabSize  = 2
+
+[ "*.{haml,yml,coffee,feature}" ]
+softTabs = true
+tabSize = 2
+
+[ text.html.markdown ]
+softTabs = true
+tabSize = 2
+spellChecking    = true
+spellingLanguage = 'en'
