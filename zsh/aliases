@@ -13,3 +13,5 @@ alias %=' '
 alias mvim='~/Applications/./mvim'
 alias ctags='/usr/local/bin/ctags'
 alias git='hub'
+alias nimrod='consular start nimrod'
+alias subl="~/Applications/./subl"
