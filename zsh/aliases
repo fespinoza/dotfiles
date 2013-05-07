@@ -10,8 +10,7 @@ alias la='ls -A'
 
 # commands starting with % for pasting from web
 alias %=' '
-alias mvim='~/Applications/./mvim'
+alias phantomjs='~/Applications/./phantomjs'
 alias ctags='/usr/local/bin/ctags'
 alias git='hub'
-alias nimrod='consular start nimrod'
-alias subl="~/Applications/./subl"
+alias tmux="TERM=screen-256color-bce tmux"

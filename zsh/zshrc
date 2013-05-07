@@ -1,3 +1,15 @@
+# number of lines kept in history
+export HISTSIZE=1000
+# number of lines saved in the history after logout
+export SAVEHIST=1000
+# location of history
+export HISTFILE=~/.zhistory
+# append command to history file once executed
+setopt inc_append_history
+
+autoload -U compinit
+compinit
+
 # Colors
 autoload -U colors
 colors
@@ -25,3 +37,7 @@ eval "$(rbenv init -)"
 
 export LC_ALL=en_US.utf-8
 export LANG="$LC_ALL"
+
+export EDITOR=vim
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
