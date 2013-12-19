@@ -41,3 +41,12 @@ export LANG="$LC_ALL"
 export EDITOR=vim
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# tmuxinator
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+export CBC="~/Work/Cranberry-Chic-Server"
+alias cbcinfra="ssh -i $CBC/cbcprd.pem ec2-user@infra.cranberrychic.com"
+alias cbcfp="ssh -i $CBC/cbcprd.pem ec2-user@fp.cranberrychic.com"
+
+export PATH="/usr/local/share/npm/bin:/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
