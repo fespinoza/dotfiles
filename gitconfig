@@ -22,6 +22,7 @@
   	l     = "!source ~/.githelpers && pretty_git_log"
   	la    = !git l --all
   	week  = !source ~/.githelpers && last_week_log
+	ctags = !.git/hooks/ctags
 [merge]
 	tool = opendiff
 [credential]
@@ -29,6 +30,13 @@
 [diff]
 	tool = opendiff
 [core]
-	excludesfile = /Users/fespinoza/.gitignore_global
+	excludesfile = /Users/fespinoza/.gitignore
 [push]
 	default = matching
+[credential]
+    helper = osxkeychain
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[init]
+	templatedir = ~/.git_template
