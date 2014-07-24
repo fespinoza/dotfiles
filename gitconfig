@@ -6,23 +6,27 @@
 [alias]
 	aa    = add --all
 	st    = status -sb
-  	std   = status
-	ci    = commit
+  std   = status
+	ci    = commit -v
 	br    = branch
 	brd   = branch -d
-  	wdiff = diff HEAD^ --word-diff
-  	undo  = reset --soft HEAD^
-	co    = checkout
-  	cob   = checkout -b
-	sma   = submodule add
-	smu   = submodule update
-  	mg    = merge --no-ff
-  	r     = !git l -30
-  	ra    = !git r --all
-  	l     = "!source ~/.githelpers && pretty_git_log"
-  	la    = !git l --all
-  	week  = !source ~/.githelpers && last_week_log
-	ctags = !.git/hooks/ctags
+  wdiff = diff HEAD^ --word-diff
+  undo  = reset --soft HEAD^
+  co    = checkout
+  cob   = checkout -b
+  sma   = submodule add
+  smu   = submodule update
+  mg    = merge --no-ff
+  r     = !git l -30
+  ra    = !git r --all
+  l     = "!source ~/.githelpers && pretty_git_log"
+  la    = !git l --all
+  week  = !source ~/.githelpers && last_week_log
+  ctags = !.git/hooks/ctags
+  create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
+  delete-branch = !sh -c 'git push origin :refs/heads/$1 && git branch -D $1' -
+  merge-branch = !git checkout master && git merge @{-1}
+  pr = !hub pull-request
 [merge]
 	tool = opendiff
 [credential]
@@ -40,3 +44,5 @@
 	smudge = git-media-smudge %f
 [init]
 	templatedir = ~/.git_template
+[commit]
+  template = ~/.gitmessage
