@@ -1,0 +1,2 @@
+DOTFILES_DIRS="$HOME/Dotfiles"
+EXCLUDES="zsh git-cwd-info.sh githelpers rbenv-default-gems rbenv-version.sh README.md"
