@@ -11,6 +11,7 @@ brew install rcm
 And then cloning the repo into `~/Dotfiles`, then
 
 ```
+curl -L https://github.com/mfaerevaag/wd/raw/master/install.sh | sh
 ln -s ~/Dotfiles/rcrc ~/.rcrc
 lsrc
 ```
