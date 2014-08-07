@@ -1,0 +1,10 @@
+*.swp
+*.swo
+.DS_Store
+.vimrc
+tags
+doc/tags-ja
+.*.orig
+coverage
+.env
+.projections.json
