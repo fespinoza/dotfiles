@@ -51,6 +51,7 @@ eval "$(rbenv init -)"
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 export TERM=xterm-256color
+fpath=(~/bin/wd $fpath)
 wd() {
   . /Users/fespinoza/bin/wd/wd.sh
 }
