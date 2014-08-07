@@ -34,7 +34,7 @@
 [diff]
 	tool = opendiff
 [core]
-	excludesfile = /Users/fespinoza/.gitignore
+	excludesfile = ~/.gitignore_global
 [push]
 	default = matching
 [credential]
