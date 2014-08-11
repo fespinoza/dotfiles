@@ -1,2 +1,3 @@
 DOTFILES_DIRS="$HOME/Dotfiles"
-EXCLUDES="zsh git-cwd-info.sh githelpers rbenv-default-gems rbenv-version.sh README.md"
+EXCLUDES="git-cwd-info.sh githelpers rbenv-default-gems rbenv-version.sh README.md zshrc.standalone"
+SYMLINK_DIRS="zsh zprezto"

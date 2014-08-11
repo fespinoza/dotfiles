@@ -15,3 +15,4 @@ alias ctags='/usr/local/bin/ctags'
 alias git='hub'
 alias tmux="TERM=screen-256color-bce tmux"
 alias cbc="cd ~/Work/Cranberry-Chic-Server"
+alias dw="wd"
