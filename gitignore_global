@@ -1,12 +1,9 @@
 *.swp
 *.swo
 .DS_Store
-.vimrc
 tags
 doc/tags-ja
 .*.orig
 coverage
 .env
-.projections.json
 .ruby-version
-DEV_NOTES.md
