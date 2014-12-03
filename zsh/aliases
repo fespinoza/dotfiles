@@ -14,8 +14,13 @@ alias phantomjs='~/Applications/./phantomjs'
 alias ctags='/usr/local/bin/ctags'
 alias git='hub'
 alias tmux="TERM=screen-256color-bce tmux"
-alias cbc="cd ~/Work/Cranberry-Chic-Server"
 
 # Warp into a directory
 # then create a sessions in tmux
-wdt() { wd "$*"; tmux new -s "$*" }
+wdt() { wd "$*"; mux start "$*" }
+wdx() { wd "$*"; tmux new -s "$*" }
+
+alias be="time bundle exec"
+alias bev="time USE_VCR=true bundle exec"
+alias deploy="heroku deploy --app rema-mine-ansatte-staging"
+alias deploy-prod="heroku deploy --app rema-mine-ansatte"

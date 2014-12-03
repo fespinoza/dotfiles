@@ -29,6 +29,7 @@ RPROMPT='%{$fg[cyan]%} $(~/Dotfiles/rbenv-version.sh)$(~/Dotfiles/git-cwd-info.s
 # Example aliases
 source ~/Dotfiles/zsh/aliases
 source ~/Dotfiles/zsh/plugins/bundler.zsh
+source ~/Dotfiles/zsh/plugins/tmuxinator.zsh
 
 export SHELL=/bin/zsh
 
