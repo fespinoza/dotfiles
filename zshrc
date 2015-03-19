@@ -56,3 +56,4 @@ fpath=(~/.zsh/bin/wd $fpath)
 wd() {
   . $HOME/.zsh/bin/wd/wd.sh
 }
+eval "$(direnv hook $0)"

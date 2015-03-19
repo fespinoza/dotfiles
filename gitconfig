@@ -48,3 +48,7 @@
 	templatedir = ~/.git_template
 [commit]
   template = ~/.gitmessage
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
