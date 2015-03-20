@@ -47,6 +47,7 @@ export LANG="$LC_ALL"
 export EDITOR=vim
 
 eval "$(rbenv init -)"
+eval "$(direnv hook zsh)"
 
 # tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator

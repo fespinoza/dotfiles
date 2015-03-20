@@ -22,5 +22,7 @@ wdx() { wd "$*"; tmux new -s "$*" }
 
 alias be="time bundle exec"
 alias bev="time USE_VCR=true bundle exec"
+alias ber="time bundle exec rescue"
+alias berv="time USE_VCR=true bundle exec rescue"
 alias deploy="heroku deploy --app rema-mine-ansatte-staging"
 alias deploy-prod="heroku deploy --app rema-mine-ansatte"
