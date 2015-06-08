@@ -31,6 +31,8 @@ source ~/Dotfiles/zsh/aliases
 source ~/Dotfiles/zsh/plugins/bundler.zsh
 source ~/Dotfiles/zsh/plugins/tmuxinator.zsh
 
+zstyle ':completion:*:*:git:*' script ~/.git-completion.zsh
+
 export SHELL=/bin/zsh
 
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
@@ -58,3 +60,6 @@ wd() {
   . $HOME/.zsh/bin/wd/wd.sh
 }
 eval "$(direnv hook $0)"
+wd() {
+  . /Users/fespinoza/bin/wd/wd.sh
+}
