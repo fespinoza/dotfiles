@@ -9,3 +9,5 @@ coverage
 .ruby-version
 *.orig
 PR.md
+.nvimrc
+.vimrc
