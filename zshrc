@@ -48,7 +48,7 @@ export BUNDLESVIM=~/Vim/bundles.vim
 export LC_ALL=en_US.utf-8
 export LANG="$LC_ALL"
 
-export EDITOR=vim
+export EDITOR=nvim
 
 eval "$(rbenv init -)"
 eval "$(direnv hook zsh)"
