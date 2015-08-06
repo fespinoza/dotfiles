@@ -9,6 +9,7 @@
   std   = status
 	ci    = commit --verbose
 	br    = branch
+  brm   = branch --merged
 	brd   = branch -d
   wdiff = diff HEAD^ --word-diff
   undo  = reset --soft HEAD^

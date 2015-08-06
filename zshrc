@@ -32,6 +32,8 @@ source ~/Dotfiles/zsh/plugins/bundler.zsh
 source ~/Dotfiles/zsh/plugins/tmuxinator.zsh
 
 zstyle ':completion:*:*:git:*' script ~/.git-completion.zsh
+fpath=(~/.zsh/completions $fpath)
+autoload -Uz compinit && compinit
 
 export SHELL=/bin/zsh
 
@@ -63,3 +65,6 @@ eval "$(direnv hook $0)"
 wd() {
   . /Users/fespinoza/bin/wd/wd.sh
 }
+
+# added by travis gem
+[ -f /Users/fespinoza/.travis/travis.sh ] && source /Users/fespinoza/.travis/travis.sh

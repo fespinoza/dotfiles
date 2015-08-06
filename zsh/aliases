@@ -12,7 +12,7 @@ alias la='ls -A'
 alias %=' '
 alias phantomjs='~/Applications/./phantomjs'
 alias ctags='/usr/local/bin/ctags'
-alias git='hub'
+#alias git='hub'
 alias tmux="TERM=screen-256color-bce tmux"
 
 # Warp into a directory
@@ -30,3 +30,4 @@ alias ovim="vim"
 alias vim="nvim"
 alias trl="tmux resize -L"
 alias trr="tmux resize -R"
+alias c="clear"
