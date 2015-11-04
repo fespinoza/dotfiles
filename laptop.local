@@ -7,26 +7,21 @@ brew cask install alfred
 brew cask install anki
 brew cask install appcleaner
 brew cask install atom
-brew cask install daisydisk
 brew cask install dropbox
 brew cask install evernote
-brew cask install firefox
 brew cask install focus
-brew cask install github
+brew cask install github-desktop
 brew cask install istat-menus
 brew cask install iterm2
 brew cask install kindle
 brew cask install licecap
-brew cask install little-snitch
-brew cask install macvim
 brew cask install mailbox
 brew cask install moom
-brew cask install mplayerx
 brew cask install screenflow
-brew cask install skitch
 brew cask install slack
 brew cask install spotify
-brew cask install vlc
+brew cask install virtualbox
+brew cask install skype
 
 gem_install_or_update 'cocoapods'
 gem_install_or_update 'compass'
@@ -36,12 +31,15 @@ gem_install_or_update 'pry'
 gem_install_or_update 'rails'
 gem_install_or_update 'rspec'
 gem_install_or_update 'tmuxinator'
+gem_install_or_update 'coffee-script'
 
 brew_install_or_upgrade 'tree'
 brew_install_or_upgrade 'watch'
 brew_install_or_upgrade 'direnv'
+
 brew_install_or_upgrade 'mongodb'
-brew_launchctl_restart 'mongodb'
+brew_install_or_upgrade 'python'
+brew_install_or_upgrade 'jq'
 
 # compile rubies
 brew_install_or_upgrade 'openssl'
@@ -55,21 +53,9 @@ sudo pip install neovim
 brew_tap 'neovim/neovim'
 brew reinstall --HEAD neovim
 
-# vundle
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
-vim +PluginInstall +qall
-
-# Vim you complete me
-(cd ~/.vim/bundle/YouCompleteMe; ./install.sh --clang-completer)
-
-# wd
-curl -L https://github.com/mfaerevaag/wd/raw/master/install.sh | sh
-
 # npm
 npm install bower -g
 npm install yeoman -g
 npm install gulp -g
 npm install grunt -g
-
-# ruby 2.1.1
-#CC=/usr/bin/gcc rbenv install 2.1.1
+npm install grunt-cli -g
