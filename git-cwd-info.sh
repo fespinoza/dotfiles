@@ -24,7 +24,7 @@ if [[ $GIT_REPO_PATH != '' && $GIT_REPO_PATH != '~' && $GIT_REPO_PATH != "$HOME/
   fi
 
   GIT_DIRTY=""
-  if [[ "$GIT_REPO_PATH" != '.' && `git ls-files -m` != "" ]]; then
+  if [[ "$GIT_REPO_PATH" != '.' && `git diff --shortstat 2> /dev/null | tail -n1` != "" ]]; then
     GIT_DIRTY=" %{[94m%}✗%{[0m%}"
   fi
 

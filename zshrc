@@ -30,6 +30,7 @@ RPROMPT='%{$fg[cyan]%} $(~/Dotfiles/rbenv-version.sh)$(~/Dotfiles/git-cwd-info.s
 source ~/Dotfiles/zsh/aliases
 source ~/Dotfiles/zsh/plugins/bundler.zsh
 source ~/Dotfiles/zsh/plugins/tmuxinator.zsh
+source ~/Dotfiles/zsh/scripts/varner.zsh
 
 # zstyle ':completion:*:*:git:*' script ~/.git-completion.zsh
 # fpath=(~/.zsh/completions $fpath)
@@ -71,3 +72,4 @@ export GHC_DOT_APP="/Applications/ghc-7.10.2.app"
 if [ -d "$GHC_DOT_APP" ]; then
   export PATH="${HOME}/.local/bin:${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
 fi
+export XDG_CONFIG_HOME=~/Config
