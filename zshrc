@@ -31,6 +31,7 @@ source ~/Dotfiles/zsh/aliases
 source ~/Dotfiles/zsh/plugins/bundler.zsh
 source ~/Dotfiles/zsh/plugins/tmuxinator.zsh
 source ~/Dotfiles/zsh/scripts/varner.zsh
+source ~/Dotfiles/zsh/scripts/g.zsh
 
 # zstyle ':completion:*:*:git:*' script ~/.git-completion.zsh
 # fpath=(~/.zsh/completions $fpath)

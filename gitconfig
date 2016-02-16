@@ -1,64 +1,79 @@
 [user]
-	name = Felipe Espinoza
-	email = fespinozacast@gmail.com
+  name = Felipe Espinoza
+  email = fespinozacast@gmail.com
 [color]
   ui  = auto
 [alias]
-	aa    = add --all
-	st    = status -sb
-  std   = status
-	ci    = commit --verbose
-	br    = branch
-  brm   = branch --merged
-	brd   = branch -d
-  wdiff = diff HEAD^ --word-diff
-  undo  = reset --soft HEAD^
-  co    = checkout
-  cob   = checkout -b
-  sma   = submodule add
-  smu   = submodule update
-  mg    = merge --no-ff
-  r     = !git l -30
-  ra    = !git r --all
-  l     = "!source ~/.githelpers && pretty_git_log"
-  la    = !git l --all
-  week  = !source ~/.githelpers && last_week_log
-  ctags = !.git/hooks/ctags
-  commit = commit --verbose
+  aa            = add --all
+  br            = branch
+  brd           = branch -d
+  brm           = branch --merged
+  browse        = "!hub browse"
+  ca            = commit --ammend
+  car           = commit --amend --no-edit
+  car           = commit --ammend --no-edit
+  ci            = commit --verbose
+  co            = checkout
+  cob           = checkout -b
+  commit        = commit --verbose
+  compare       = "!hub compare"
   create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
+  ctags         = !.git/hooks/ctags
+  dc            = diff --word-diff --cached --color-words
   delete-branch = !sh -c 'git push origin :refs/heads/$1 && git branch -D $1' -
-  merge-branch = !git checkout master && git merge @{-1}
-  pr = !hub pull-request
-	sla = log --oneline --decorate --graph --all
-	glog = log -E -i --grep
-	car = commit --amend --no-edit
-	unstage = reset
-	uncommit = reset --soft HEAD^
+  develop       = checkout develop
+  df            = diff --word-diff --color-words
+  glog          = log -E -i --grep
+  issues        = "!hub browse -- issues"
+  l             = "!source ~/.githelpers && pretty_git_log"
+  la            = !git l --all
+  master        = checkout master
+  merge-branch  = !git checkout master && git merge @{-1}
+  mg            = merge --no-ff
+  prd           = !hub pull-request -b develop
+  ps            = push
+  r             = !git l -30
+  ra            = !git r --all
+  ri            = rebase -i
+  rmdeleted     = !git rm $(git ls-files --deleted)
+  rpo           = remote prune origin
+  sla           = log --oneline --decorate --graph --all
+  sma           = submodule add
+  smu           = submodule update
+  st            = status -sb
+  std           = status
+  unchange      = checkout --
+  uncommit      = reset --soft HEAD^
+  unstage       = reset
+  wdiff         = diff HEAD^ --word-diff
+  week          = !source ~/.githelpers && last_week_log
 [merge]
-	tool = opendiff
+  tool = opendiff
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [diff]
-	tool = opendiff
+  tool = opendiff
 [core]
-	excludesfile = ~/.gitignore_global
-	editor = nvim
+  excludesfile = ~/.gitignore_global
+  editor = nvim
+[fetch]
+  prune = true
 [push]
-	default = matching
-	tags = true
+  default = current
+  tags = true
 [credential]
-    helper = osxkeychain
+  helper = osxkeychain
 [filter "media"]
-	required = true
-	clean = git media clean %f
-	smudge = git media smudge %f
+  required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
 [commit]
   template = ~/.gitmessage
 [filter "hawser"]
-	clean = git hawser clean %f
-	smudge = git hawser smudge %f
-	required = true
+  clean = git hawser clean %f
+  smudge = git hawser smudge %f
+  required = true
 [filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
-	required = true
+  clean = git lfs clean %f
+  smudge = git lfs smudge %f
+  required = true
