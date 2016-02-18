@@ -12,5 +12,13 @@ _download_varner_import_data_files() {
 
 alias get_data_files="_download_varner_import_data_files"
 
-alias deploy-prod-changes="git log --merges master..develop --format='- %w(80, 2, 2)%b' | pbcopy"
+deploy_prod_changes() {
+  g master
+  g pull
+  g back
+  g develop
+  g pull
+  g back
+  git log --merges master..develop --format='- %w(80, 2, 2)%b' | pbcopy
+}
 
