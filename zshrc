@@ -44,6 +44,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH=/usr/local/bin:$PATH
 export PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$HOME/Dotfiles/git:$PATH"
 
 export BUNDLESVIM=~/Vim/bundles.vim
 

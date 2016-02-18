@@ -14,3 +14,9 @@ And then cloning the repo into `~/Dotfiles`, then
 ln -s ~/Dotfiles/rcrc ~/.rcrc
 lsrc
 ```
+
+### Git Commands to Build
+
+- publish and make pull request command
+- open a pull request
+
