@@ -22,3 +22,10 @@ deploy_prod_changes() {
   git log --merges master..develop --format='- %w(80, 2, 2)%b' | pbcopy
 }
 
+replicate_production_db() {
+  rake db:drop db:create
+  heroku pg:backups capture -r production;
+  curl -o $(date '+%Y-%m-%d').dump `heroku pg:backups public-url -r production`;
+  pg_restore --verbose --clean --no-acl --no-owner -h localhost -d myshop-backend_development $(date '+%Y-%m-%d').dump
+  rake db:migrate db:test:prepare
+}
