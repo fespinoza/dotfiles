@@ -4,6 +4,8 @@
 [color]
   ui  = auto
 [alias]
+  conf          = !cat ~/.gitconfig
+  gconf         = "!git conf | grep"
   aa            = add --all
   br            = branch
   brd           = branch -d
