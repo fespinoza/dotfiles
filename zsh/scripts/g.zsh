@@ -2,7 +2,7 @@
 # With arguments: acts like `git`
 g() {
   if [[ $# > 0 ]]; then
-    git $0
+    git $@
   else
     git status
   fi
