@@ -1,0 +1,39 @@
+#!/usr/bin/env ruby
+# Usage: git not-released
+#
+# it prints a formatted list of the changes between develop and master that
+# have not being released yet
+
+def merge_commits_not_merged_into_master
+  `git log --merges master..develop --format='- %s%n%w(80, 2, 2)%b'`
+end
+
+GITHUB_MERGE_COMMIT_FORMAT = /Merge pull request (?<pr_number>#\d+) .*/
+
+def pull_request_number_for(github_commit_title)
+  md = github_commit_title.match(GITHUB_MERGE_COMMIT_FORMAT)
+  md[:pr_number] if md
+end
+
+def format_merge_commit(github_commit_title, commit_title)
+  pr_number = pull_request_number_for(github_commit_title)
+  "- #{pr_number}: #{commit_title.strip}"
+end
+
+def parsed_merge_commits
+  data = merge_commits_not_merged_into_master
+  data.split('- ').reject(&:empty?).map { |e| e.split("\n") }
+end
+
+def formatted_list_of_changes
+  parsed_merge_commits.map { |pair| format_merge_commit(pair.first, pair.last) }
+end
+
+def print_formatted_list_of_changes
+  formatted_list_of_changes.each do |commit_title|
+    $stdout.puts commit_title
+  end
+  nil
+end
+
+print_formatted_list_of_changes

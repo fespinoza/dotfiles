@@ -1,27 +1,18 @@
 #!/bin/sh
 
-brew_tap 'caskroom/cask'
-brew_install_or_upgrade 'brew-cask'
+brew tap 'caskroom/cask'
+brew install 'brew-cask'
 
 brew cask install alfred
-brew cask install anki
 brew cask install appcleaner
-brew cask install atom
-brew cask install dropbox
-brew cask install evernote
 brew cask install focus
 brew cask install github-desktop
 brew cask install istat-menus
 brew cask install iterm2
 brew cask install kindle
 brew cask install licecap
-brew cask install mailbox
-brew cask install moom
-brew cask install screenflow
-brew cask install slack
 brew cask install spotify
-brew cask install virtualbox
-brew cask install skype
+brew cask install flux
 
 gem_install_or_update 'cocoapods'
 gem_install_or_update 'compass'
@@ -33,24 +24,23 @@ gem_install_or_update 'rspec'
 gem_install_or_update 'tmuxinator'
 gem_install_or_update 'coffee-script'
 
-brew_install_or_upgrade 'tree'
-brew_install_or_upgrade 'watch'
-brew_install_or_upgrade 'direnv'
+brew install 'tree'
+brew install 'watch'
+brew install 'direnv'
 
-brew_install_or_upgrade 'mongodb'
-brew_install_or_upgrade 'python'
-brew_install_or_upgrade 'jq'
+brew install 'python'
+brew install 'jq'
 
 # compile rubies
-brew_install_or_upgrade 'openssl'
-brew_install_or_upgrade 'libyaml'
-brew_install_or_upgrade 'libffi'
+brew install 'openssl'
+brew install 'libyaml'
+brew install 'libffi'
 
 # neovim
 sudo easy_install pip
 sudo pip install neovim
 
-brew_tap 'neovim/neovim'
+brew tap 'neovim/neovim'
 brew reinstall --HEAD neovim
 
 # npm

@@ -45,6 +45,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/Dotfiles/git:$PATH"
+export PATH="$HOME/Dotfiles/bin:$PATH"
 
 export BUNDLESVIM=~/Vim/bundles.vim
 
@@ -75,3 +76,4 @@ if [ -d "$GHC_DOT_APP" ]; then
   export PATH="${HOME}/.local/bin:${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
 fi
 export XDG_CONFIG_HOME=~/Config
+export PGHOST=localhost

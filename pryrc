@@ -9,6 +9,9 @@ Pry.commands.alias_command 'n', 'next' rescue nil
 # === CUSTOM PROMPT ===
 # This prompt shows the ruby version (useful for RVM)
 Pry.prompt = [proc { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} > " }, proc { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} * " }]
+if defined?(Rails)
+  Pry.prompt = [proc { |obj, nest_level, _| "[#{Rails.env}] #{RUBY_VERSION} (#{obj}):#{nest_level} > " }]
+end
 
 # === Listing config ===
 # Better colors - by default the headings for methods are too
@@ -35,6 +38,13 @@ begin
 rescue LoadError => err
   puts "gem install awesome_print  # <-- highly recommended"
 end
+
+# Load 'table_print'
+begin
+  require 'table_print'
+rescue LoadError => err
+end
+
 
 # === CUSTOM COMMANDS ===
 # from: https://gist.github.com/1297510

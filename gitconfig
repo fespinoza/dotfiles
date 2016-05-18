@@ -1,6 +1,7 @@
 [user]
-  name = Felipe Espinoza
-  email = fespinozacast@gmail.com
+	name = Felipe Espinoza
+	email = fespinozacast@gmail.com
+	signkey = 59F53B57
 [color]
   ui  = auto
 [alias]
@@ -34,6 +35,8 @@
   master        = checkout master
   merge-branch  = !git checkout master && git merge @{-1}
   mg            = merge --no-ff
+  pr            = !hub pull-request
+  prm           = !hub pull-request -b master
   prd           = !hub pull-request -b develop
   ps            = push
   r             = !git l -30
@@ -53,6 +56,12 @@
   wdiff         = diff HEAD^ --word-diff
   week          = !source ~/.githelpers && last_week_log
 	mt            = mergetool
+	tr-8r = johannes
+	publish-pr = !git
+	logdiff = log --format='- %s%n%n%w(80,2,2)%b'
+	rb = rebase
+	rc = rebase
+  brdd = branch -D
 [merge]
   tool = opendiff
 [credential]
@@ -83,3 +92,5 @@
   clean = git lfs clean %f
   smudge = git lfs smudge %f
   required = true
+[github]
+	user = fespinoza
