@@ -14,7 +14,8 @@
   brd           = branch -d
   brm           = branch --merged
   browse        = "!hub browse"
-  ca            = commit --ammend
+  ca            = commit --amend
+  amend         = commit --amend
   car           = commit --amend --no-edit
   car           = commit --ammend --no-edit
   ci            = commit --verbose
