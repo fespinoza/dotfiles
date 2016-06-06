@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+image_library_add() {
+  MESSAGE=$(/Users/fespinoza/Dropbox\ \(Personal\)/Alfred.alfredpreferences/workflows/user.workflow.88266D68-E6E7-49FD-A794-96D3F4E1A1CC/bin/./image_library "add: $@")
+  osascript -e "display notification \"$MESSAGE\" with title \"Image Library\""
+}
+
+image_library_add $@

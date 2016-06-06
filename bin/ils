@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+
+image_library_search() {
+  IMAGE=$(/Users/fespinoza/Dropbox\ \(Personal\)/Alfred.alfredpreferences/workflows/user.workflow.88266D68-E6E7-49FD-A794-96D3F4E1A1CC/bin/./image_library "csearch: $@" | pick)
+  echo $IMAGE
+  echo $IMAGE | sed -n 's/.*original_url=>"\([^"]*\)".*/\1/p' | pbcopy
+  TITLE=$(echo $IMAGE | sed -n 's/.*title=>"\([^"]*\)".*/\1/p')
+  osascript -e "display notification \"'$TITLE' added to your clipboard\" with title \"Image Library\""
+}
+
+image_library_search $@
