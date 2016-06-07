@@ -27,6 +27,7 @@ gem_install_or_update 'coffee-script'
 brew install 'tree'
 brew install 'watch'
 brew install 'direnv'
+brew install 'pick'
 
 brew install 'python'
 brew install 'jq'
