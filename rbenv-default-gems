@@ -3,6 +3,8 @@ pry
 pry-doc
 pry-rescue
 pry-stack_explorer
+pry-highlight
+pry-theme
 cheat
 middleman
 rails
