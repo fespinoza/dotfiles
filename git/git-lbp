@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+# Usage: git lbp
+#
+# checks the current branch name and logs the differences with the parent (and
+# copy to pasteboard)
+
+def current_branch
+  `git rev-parse --abbrev-ref HEAD`.chomp
+end
+
+def log_in_relation_to_base_branch
+  log_command = "git log --format='- %s%n%w(80,2,2)%b' "\
+                "develop..#{current_branch}"
+  system(log_command)
+  system("#{log_command} | pbcopy")
+end
+
+log_in_relation_to_base_branch
