@@ -6,6 +6,7 @@ doc/tags-ja
 .*.orig
 coverage
 .env
+.envrc
 .ruby-version
 *.orig
 PR.md
@@ -13,3 +14,6 @@ PR.md
 .vimrc
 .projections.json
 oneoffs
+WORK_LOG.md
+.vscode
+npm-debug.log
