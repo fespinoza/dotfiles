@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+def current_branch
+  `git rev-parse --abbrev-ref HEAD`.chomp
+end
+
+def git_pr
+  return if %w(develop).include?(current_branch)
+  system('hub pull-request -b develop')
+end
+
+git_pr
