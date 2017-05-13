@@ -29,6 +29,7 @@
   delete-branch = !sh -c 'git push origin :refs/heads/$1 && git branch -D $1' -
   develop       = checkout develop
   df            = diff --word-diff --color-words
+  dflog         = log --format='- %s%n%w(80,2,2)%b'
   glog          = log -E -i --grep
   issues        = "!hub browse -- issues"
   l             = "!source ~/.githelpers && pretty_git_log"
@@ -36,8 +37,7 @@
   master        = checkout master
   merge-branch  = !git checkout master && git merge @{-1}
   mg            = merge --no-ff
-  pr            = !hub pull-request
-  prm           = !hub pull-request -b master
+  prm           = git pr
   prd           = !hub pull-request -b develop
   ps            = push
   r             = !git l -30
