@@ -4,12 +4,40 @@ Pry.editor = 'nvim'
 # == Pry-Nav - Using pry as a debugger ==
 Pry.commands.alias_command 'c', 'continue' rescue nil
 Pry.commands.alias_command 's', 'step' rescue nil
+
+
 # Pry.config.theme = "railscasts"
+
+
 # === CUSTOM PROMPT ===
+def formatted_env
+  case Rails.env
+  when 'production'
+    bold_upcased_env = Pry::Helpers::Text.bold(Rails.env.upcase)
+    Pry::Helpers::Text.red(bold_upcased_env)
+  when 'staging'
+    Pry::Helpers::Text.yellow(Rails.env)
+  when 'development'
+    Pry::Helpers::Text.green(Rails.env)
+  else
+    Rails.env
+  end
+end
+
+def app_name
+  File.basename(Rails.root)
+end
+
 # This prompt shows the ruby version (useful for RVM)
-Pry.prompt = [proc { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} > " }, proc { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} * " }]
+Pry.prompt = [
+  proc { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} > " },
+  proc { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} * " }
+]
+
 if defined?(Rails)
-  Pry.prompt = [proc { |obj, nest_level, _| "[#{Rails.env}] #{RUBY_VERSION} (#{obj}):#{nest_level} > " }]
+  Pry.config.prompt = proc do |obj, nest_level, _|
+    "[#{app_name}][#{formatted_env}] (#{RUBY_VERSION}) #{obj}:#{nest_level}> "
+  end
 end
 
 # === Listing config ===
