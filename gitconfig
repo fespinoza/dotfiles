@@ -63,6 +63,7 @@
 	rb = rebase
 	rc = rebase
   brdd = branch -D
+  cwip = !git commit -a -m '[skip ci] WIP' && SKIP_RUBOCOP=1 git push
 [merge]
   tool = opendiff
 [credential]
@@ -90,8 +91,9 @@
   smudge = git hawser smudge %f
   required = true
 [filter "lfs"]
-  clean = git lfs clean %f
-  smudge = git lfs smudge %f
-  required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [github]
 	user = fespinoza
