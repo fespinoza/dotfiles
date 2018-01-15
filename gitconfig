@@ -57,7 +57,6 @@
   wdiff         = diff HEAD^ --word-diff
   week          = !source ~/.githelpers && last_week_log
 	mt            = mergetool
-	tr-8r = johannes
 	publish-pr = !git
 	logdiff = log --format='- %s%n%n%w(80,2,2)%b'
 	rb = rebase
