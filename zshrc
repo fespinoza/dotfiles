@@ -46,6 +46,7 @@ export PATH="/Applications/Postgres.app/Contents/Versions/9.5/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/Dotfiles/git:$PATH"
 export PATH="$HOME/Dotfiles/bin:$PATH"
+export PATH="$HOME/Desktop/lab/custom-git-scripts/bin:$PATH"
 
 export BUNDLESVIM=~/Vim/bundles.vim
 

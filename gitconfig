@@ -64,6 +64,9 @@
 	rc = rebase
   brdd = branch -D
   cwip = !git commit -a -m '[skip ci] WIP' && SKIP_RUBOCOP=1 git push
+	cdbrm = clean-development-branches
+	cl = changelog-from-parent
+	nr = not-released
 [merge]
   tool = opendiff
 [credential]
