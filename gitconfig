@@ -66,12 +66,25 @@
 	cdbrm = clean-development-branches
 	cl = changelog-from-parent
 	nr = not-released
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+# If you want to set up Kaleidoscope as the default diff tool,
+# then also set the following variables:
+[difftool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" \"$REMOTE\"
+
+# If you want to set up Kaleidoscope as the default merge tool,
+# then also set the following variables:
+[mergetool]
+	prompt = false
 [merge]
-  tool = opendiff
+	tool = Kaleidoscope
 [credential]
   helper = osxkeychain
-[diff]
-  tool = opendiff
 [core]
   excludesfile = ~/.gitignore_global
   editor = nvim
@@ -80,8 +93,6 @@
 [push]
   default = current
   tags = true
-[credential]
-  helper = osxkeychain
 [filter "media"]
   required = true
   clean = git media clean %f

@@ -1,0 +1,3 @@
+[submodule "zsh/bin/wd"]
+	path = zsh/bin/wd
+	url = https://github.com/mfaerevaag/wd
