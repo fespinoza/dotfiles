@@ -66,6 +66,7 @@
 	cdbrm = clean-development-branches
 	cl = changelog-from-parent
 	nr = not-released
+	o = open-in-github
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 # If you want to set up Kaleidoscope as the default diff tool,
@@ -110,3 +111,5 @@
 	required = true
 [github]
 	user = fespinoza
+[pull]
+	rebase = false
