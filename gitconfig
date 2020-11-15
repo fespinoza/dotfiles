@@ -60,7 +60,7 @@
 	publish-pr = !git
 	logdiff = log --format='- %s%n%n%w(80,2,2)%b'
 	rb = rebase
-	rc = rebase
+	rbc = rebase --continue
   brdd = branch -D
   cwip = !git commit -a -m '[skip ci] WIP' && SKIP_RUBOCOP=1 git push
 	cdbrm = clean-development-branches
