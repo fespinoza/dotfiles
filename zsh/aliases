@@ -10,7 +10,7 @@ alias la='ls -A'
 
 # commands starting with % for pasting from web
 alias %=' '
-alias ctags='/usr/local/bin/ctags'
+# alias ctags='/usr/local/bin/ctags'
 alias tmux="TERM=screen-256color-bce tmux"
 
 # Warp into a directory

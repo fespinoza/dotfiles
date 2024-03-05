@@ -5,41 +5,28 @@
 [color]
   ui  = auto
 [alias]
-  conf          = !cat ~/.gitconfig
+  conf          = !vim ~/.gitconfig
   gconf         = "!git conf | grep"
   aa            = add --all
-  cg            = 'config --global'
   back          = checkout -
   br            = branch
   brd           = branch -d
   brm           = branch --merged
-  browse        = "!hub browse"
-  ca            = commit --amend
-  amend         = commit --amend
-  car           = commit --amend --no-edit
-  car           = commit --ammend --no-edit
+  ca            = commit --amend --verbose
   ci            = commit --verbose
   co            = checkout
   cob           = checkout -b
-  commit        = commit --verbose
-  compare       = "!hub compare"
-  create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
   ctags         = !.git/hooks/ctags
   dc            = diff --word-diff --cached --color-words
   delete-branch = !sh -c 'git push origin :refs/heads/$1 && git branch -D $1' -
-  develop       = checkout develop
   df            = diff --word-diff --color-words
   dflog         = log --format='- %s%n%w(80,2,2)%b'
   glog          = log -E -i --grep
-  issues        = "!hub browse -- issues"
   l             = "!source ~/.githelpers && pretty_git_log"
   la            = !git l --all
-  master        = checkout master
-  merge-branch  = !git checkout master && git merge @{-1}
+  main          = checkout main
   mg            = merge --no-ff
   prm           = git pr
-  prd           = !hub pull-request -b develop
-  ps            = push
   r             = !git l -30
   ra            = !git r --all
   ri            = rebase -i
@@ -57,16 +44,18 @@
   wdiff         = diff HEAD^ --word-diff
   week          = !source ~/.githelpers && last_week_log
 	mt            = mergetool
-	publish-pr = !git
-	logdiff = log --format='- %s%n%n%w(80,2,2)%b'
-	rb = rebase
-	rbc = rebase --continue
-  brdd = branch -D
-  cwip = !git commit -a -m '[skip ci] WIP' && SKIP_RUBOCOP=1 git push
-	cdbrm = clean-development-branches
-	cl = changelog-from-parent
-	nr = not-released
-	o = open-in-github
+	logdiff       = log --format='- %s%n%n%w(80,2,2)%b'
+	rb            = rebase
+	rbc           = rebase --continue
+  brdd          = branch -D
+  wip           = !git commit -a -m 'WIP [ci skip]'
+	cdbrm         = clean-development-branches
+	cl            = changelog-from-parent
+	nr            = not-released
+	o             = open-in-github
+  what          = what-changed-in-branch
+	bcd           = branch-changes-diff
+	bcl           = branch-changes-log
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 # If you want to set up Kaleidoscope as the default diff tool,
@@ -94,6 +83,9 @@
 [push]
   default = current
   tags = true
+	autoSetupRemote = true
+[pull]
+  tags = true
 [filter "media"]
   required = true
   clean = git media clean %f
@@ -113,3 +105,9 @@
 	user = fespinoza
 [pull]
 	rebase = false
+[diff "localizablestrings"]
+  ; textconv = "iconv -f utf-16 -t utf-8"
+  ; textconv = "iconv -t utf-8"
+  ; binary = false
+[init]
+	defaultBranch = main

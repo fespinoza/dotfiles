@@ -13,6 +13,7 @@ HELPDIR=/usr/local/share/zsh/helpfiles
 autoload -U compinit
 compinit
 
+
 # Colors
 autoload -U colors
 colors
@@ -46,7 +47,8 @@ export PATH="/Applications/Postgres.app/Contents/Versions/9.5/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/Dotfiles/git:$PATH"
 export PATH="$HOME/Dotfiles/bin:$PATH"
-export PATH="$HOME/Desktop/lab/custom-git-scripts/bin:$PATH"
+export PATH="$HOME/Code/projects/custom-git-scripts/bin:$PATH"
+export PATH="$HOME/.mint/bin:$PATH"
 
 export BUNDLESVIM=~/Vim/bundles.vim
 
@@ -55,6 +57,7 @@ export LANG="$LC_ALL"
 
 export EDITOR=nvim
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(rbenv init -)"
 eval "$(direnv hook zsh)"
 
@@ -78,3 +81,8 @@ if [ -d "$GHC_DOT_APP" ]; then
 fi
 export XDG_CONFIG_HOME=~/Config
 export PGHOST=localhost
+
+export PATH="$HOME/.bin:$PATH"
+source /Users/fespinoza/.asdf/asdf.sh
+
+# alias swiftlint="mint run swiftlint@0.49.1"
