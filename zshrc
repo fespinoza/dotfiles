@@ -43,12 +43,12 @@ export SHELL=/bin/zsh
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH=/usr/local/bin:$PATH
-export PATH="/Applications/Postgres.app/Contents/Versions/9.5/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/Dotfiles/git:$PATH"
 export PATH="$HOME/Dotfiles/bin:$PATH"
 export PATH="$HOME/Code/projects/custom-git-scripts/bin:$PATH"
 export PATH="$HOME/.mint/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
 export BUNDLESVIM=~/Vim/bundles.vim
 
@@ -84,5 +84,14 @@ export PGHOST=localhost
 
 export PATH="$HOME/.bin:$PATH"
 source /Users/fespinoza/.asdf/asdf.sh
-
 # alias swiftlint="mint run swiftlint@0.49.1"
+source ~/Dotfiles/credentials.sh
+export PATH="/Users/fespinoza/Code/work/sats/iOS:$PATH"
+export PATH="/Users/fespinoza/Code/work/sats/iOS:$PATH"
+export PATH="/Users/fespinoza/Dotfiles:$PATH"
+export PATH="/Users/fespinoza/Dotfiles/zsh/bin:$PATH"
+export PATH="/Users/fespinoza/Code/work/sats/iOS/ci_scripts:$PATH"
+export PATH="/Users/fespinoza/Code/work/sats/iOS:$PATH"
+export PATH="/Users/fespinoza/Code/work/sats/iOS:$PATH"
+export PATH="/Users/fespinoza/Code/work/sats/iOS:$PATH"
+export PATH="/Users/fespinoza/Dotfiles/zsh/bin:$PATH"

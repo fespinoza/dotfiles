@@ -54,12 +54,16 @@
 	nr            = not-released
 	o             = open-in-github
   what          = what-changed-in-branch
+  what-all      = log --reverse --pretty=tformat:'- %s%n%b' main...HEAD
 	bcd           = branch-changes-diff
 	bcl           = branch-changes-log
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 # If you want to set up Kaleidoscope as the default diff tool,
 # then also set the following variables:
+  alias-list    = config --get-regexp ^alias
+  al            = config --get-regexp ^alias
+	bst = branch-status
 [difftool]
 	prompt = false
 [diff]

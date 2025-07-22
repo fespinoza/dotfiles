@@ -23,3 +23,8 @@ alias vim="nvim"
 alias trl="tmux resize -L"
 alias trr="tmux resize -R"
 alias c="clear"
+
+alias prt="cat .github/pull_request_template.md"
+alias da="direnv allow"
+
+alias spmst="swift run --package-path /Users/fespinoza/Code/experiments/SPMVersionStatus spm-version-status"
