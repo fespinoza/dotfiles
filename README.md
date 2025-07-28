@@ -13,6 +13,7 @@ And then cloning the repo into `~/Dotfiles`, then
 ```
 ln -s ~/Dotfiles/rcrc ~/.rcrc
 lsrc
+rcup
 ```
 
 ### Git Commands to Build
